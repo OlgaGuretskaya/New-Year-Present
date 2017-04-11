@@ -3,6 +3,7 @@ package presentCreation;
 import converter.Converter;
 import entity.Present;
 import exceptions.ExceptionNumberFormat;
+import exceptions.ExceptionOutofMemory;
 import reader.Reader;
 import sweets.Biscuit;
 import sweets.Candy;
@@ -28,6 +29,7 @@ public class CreationPresentByTypingWeight {
         Converter converter = new Converter();
         Sweets sweets;
         ExceptionNumberFormat exceptionNumberFormat = new ExceptionNumberFormat();
+        ExceptionOutofMemory exceptionOutofMemory = new ExceptionOutofMemory();
 
 
         public void createPresentByTypingWeight() {
@@ -65,6 +67,9 @@ public class CreationPresentByTypingWeight {
            }
             catch (NumberFormatException e){
                exceptionNumberFormat.getExceptionNumberFormat();
+            }
+            catch (OutOfMemoryError e){
+                exceptionOutofMemory.getExceptionOutofMemory();
             }
 
 

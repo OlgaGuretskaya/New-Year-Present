@@ -5,6 +5,7 @@ import entity.Present;
 
 import exceptions.ExceptionNullPointer;
 import exceptions.ExceptionNumberFormat;
+import exceptions.ExceptionOutofMemory;
 import reader.Reader;
 import sweets.Biscuit;
 import sweets.Candy;
@@ -30,6 +31,7 @@ public class PresentCreationByTypingItemsCount {
     Sweets sweets;
     ExceptionNullPointer exceptionNullPointer = new ExceptionNullPointer();
     ExceptionNumberFormat exceptionNumberFormat = new ExceptionNumberFormat();
+    ExceptionOutofMemory exceptionOutofMemory = new ExceptionOutofMemory();
 
 
     public int typeItemCount() {
@@ -50,6 +52,10 @@ public class PresentCreationByTypingItemsCount {
 
         } catch (NumberFormatException e) {
             exceptionNumberFormat.getExceptionNumberFormat();
+
+        }
+        catch (OutOfMemoryError e){
+            exceptionOutofMemory.getExceptionOutofMemory();
 
         }
 
