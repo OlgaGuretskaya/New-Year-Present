@@ -7,14 +7,16 @@ import java.util.List;
  */
 public class SweetSercher {
 
-    public void searchSweet(List<String> ourPresent){
-        try{
-    System.out.println("Найти элемент с индексом 56:" + ourPresent.get(56));
+    public void searchSweet(List<String> ourPresent) {
+        try {
+            System.out.println("Найти элемент с индексом 56:" + ourPresent.get(56));
 
-    }
-    catch (NullPointerException e){
-        System.out.println("56 айтема не существует!");
+        } catch (NullPointerException e) {
+            System.out.println("56 айтема не существует!");
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Нет элемента с индексом 56!");
+
         }
-    }
 
+    }
 }

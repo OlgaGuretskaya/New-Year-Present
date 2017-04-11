@@ -3,6 +3,8 @@ package presentCreation;
 import converter.Converter;
 import entity.Present;
 
+import exceptions.ExceptionNullPointer;
+import exceptions.ExceptionNumberFormat;
 import reader.Reader;
 import sweets.Biscuit;
 import sweets.Candy;
@@ -13,6 +15,7 @@ import writer.Writer;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Random;
 
 /**
@@ -25,6 +28,8 @@ public class PresentCreationByTypingItemsCount {
     Reader reader = new Reader();
     Converter converter = new Converter();
     Sweets sweets;
+    ExceptionNullPointer exceptionNullPointer = new ExceptionNullPointer();
+    ExceptionNumberFormat exceptionNumberFormat = new ExceptionNumberFormat();
 
 
     public int typeItemCount() {
@@ -38,11 +43,16 @@ public class PresentCreationByTypingItemsCount {
             countItems = converter.convertStringToInt(item);
             present.setItems(countItems);
 
+            if(countItems > 10000){
+                throw new IndexOutOfBoundsException(" Введенное значение больше 10000!");
+            }
+
 
         } catch (NumberFormatException e) {
-            System.out.println("Введено НЕчисловое значение! Протри глаза и попробуй еще раз!!!");
+            exceptionNumberFormat.getExceptionNumberFormat();
 
         }
+
 
         return countItems;
 
@@ -74,12 +84,16 @@ public class PresentCreationByTypingItemsCount {
             countItem++;
         }
         ourPresent = present.getPresentArray();
+        if(ourPresent.isEmpty()){
+         throw new NullPointerException();
+       }
         System.out.println("Собранный подарок:" + ourPresent);
         System.out.println("Собранный подарок - вес:" + totalWeight);
         }
         catch (NullPointerException e){
-            System.out.println("Подарок не собран!");
+           exceptionNullPointer.getExceptionNullPointer();
         }
+
 
         return ourPresent;
     }

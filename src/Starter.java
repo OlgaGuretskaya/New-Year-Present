@@ -1,7 +1,8 @@
+import collectionsWorkers.*;
 import presentActions.PresentSorting;
 import presentActions.SweetSercher;
+import presentCreation.CreationPresentByTypingWeight;
 import presentCreation.PresentCreationByTypingItemsCount;
-import collectionsWorkers.*;
 
 import java.util.List;
 import java.util.Map;
@@ -12,6 +13,7 @@ import java.util.Map;
 public class Starter {
 
     public static void main(String[] args) {
+        CreationPresentByTypingWeight creationPresentByTypingWeight = new CreationPresentByTypingWeight();
         PresentCreationByTypingItemsCount presentCreationByTypingItemsCount = new PresentCreationByTypingItemsCount();
         WorkerForArrayList workerForArrayList = new WorkerForArrayList();
         WorkerForLinkedList workerForLinkedList = new WorkerForLinkedList();
@@ -22,13 +24,11 @@ public class Starter {
         PresentSorting presentSorting = new PresentSorting();
         SweetSercher sweetSercher = new SweetSercher();
 
+        creationPresentByTypingWeight.createPresentByTypingWeight();
         int presentItems = presentCreationByTypingItemsCount.typeItemCount();
-
-
         List<String> ourPresent = presentCreationByTypingItemsCount.createPresent(presentItems);
         sweetSercher.searchSweet(ourPresent);
         presentSorting.sortPresent(ourPresent);
-
         workerForArrayList.createPresentUsingArrayList(ourPresent);
         workerForLinkedList.createPresentUsingLinkedList(ourPresent);
         workerForHashSet.createPresentUsingHashSet(ourPresent);

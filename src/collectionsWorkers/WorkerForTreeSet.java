@@ -1,5 +1,6 @@
 package collectionsWorkers;
 
+import exceptions.ExceptionNullPointer;
 import presentCreation.PresentCreationByTypingItemsCount;
 import timeCalculation.TimeCalculation;
 
@@ -10,9 +11,10 @@ import java.util.TreeSet;
 /**
  * Created by volha_huretskaya on 4/5/17.
  */
-public class WorkerForTreeSet extends PresentCreationByTypingItemsCount {
+public class WorkerForTreeSet {
 
     TimeCalculation timeCalculation = new TimeCalculation();
+    ExceptionNullPointer exceptionNullPointer = new ExceptionNullPointer();
 
     public void createPresentUsingTreeSet(List<String> list) {
 
@@ -27,7 +29,7 @@ public class WorkerForTreeSet extends PresentCreationByTypingItemsCount {
            System.out.println("Удалить элемент 'Сникерс' из списка:" + tree.remove("Cникерс"));
            System.out.println("Размер после удаления:" + tree.size());
            tree.add("Леденец");
-           System.out.println("TreeMap c добавленным элементом 'Леденец' с индексом 88:" + tree);
+           System.out.println("TreeMap c добавленным элементом 'Леденец':" + tree);
            System.out.println("Размер после добавления:" + tree.size());
            long endTime = timeCalculation.currentTimeMillis();
            timeCalculation.timeCalculation(startTime, endTime);
@@ -35,7 +37,7 @@ public class WorkerForTreeSet extends PresentCreationByTypingItemsCount {
 
        }
        catch(NullPointerException e){
-           System.out.println("Нет листа!");
+           exceptionNullPointer.getExceptionNullPointer();
 
        }
     }

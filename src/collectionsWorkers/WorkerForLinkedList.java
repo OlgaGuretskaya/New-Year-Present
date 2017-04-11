@@ -1,5 +1,7 @@
 package collectionsWorkers;
 
+import exceptions.ExceptionIndexOutOfBounds;
+import exceptions.ExceptionNullPointer;
 import presentCreation.PresentCreationByTypingItemsCount;
 import timeCalculation.TimeCalculation;
 
@@ -9,9 +11,11 @@ import java.util.List;
 /**
  * Created by volha_huretskaya on 4/5/17.
  */
-public class WorkerForLinkedList extends PresentCreationByTypingItemsCount {
+public class WorkerForLinkedList {
 
     TimeCalculation timeCalculation = new TimeCalculation();
+    ExceptionIndexOutOfBounds exceptionIndexOutOfBounds = new ExceptionIndexOutOfBounds();
+    ExceptionNullPointer exceptionNullPointer = new ExceptionNullPointer();
 
     public void createPresentUsingLinkedList(List<String> list) {
 
@@ -20,9 +24,9 @@ public class WorkerForLinkedList extends PresentCreationByTypingItemsCount {
         long startTime = timeCalculation.currentTimeMillis();
         System.out.println("  ");
         System.out.println("Собранный подарок в Linkedlist:" + linkedList);
-        System.out.println("Элемент из списка по индексу 3:" + linkedList.get(3));
         System.out.println("Есть ли элемент 'Милка' в списке:" + linkedList.contains("Милка"));
-        System.out.println("Удалить элемент из списка с индексом 2:" + linkedList.remove(2));
+        System.out.println("Элемент из списка по индексу 3:" + linkedList.get(3));
+        System.out.println("Удалить элемент из списка с индексом 8:" + linkedList.remove(8));
         System.out.println("Размер после удаления:" + linkedList.size());
         linkedList.add(88, "Семечки");
         System.out.println("Linkedlist c добавленным элементом 'Семечки' с индексом 88:" + linkedList);
@@ -31,10 +35,15 @@ public class WorkerForLinkedList extends PresentCreationByTypingItemsCount {
         timeCalculation.timeCalculation(startTime, endTime);
     }
     catch(NullPointerException e){
-        System.out.println("Нет листа!");
+      exceptionNullPointer.getExceptionNullPointer();
 
     }
 
+    catch (IndexOutOfBoundsException e) {
+        exceptionIndexOutOfBounds.getExceptionIndexOutOfBoundsforList(list);
+
+
+    }
 
 
     }

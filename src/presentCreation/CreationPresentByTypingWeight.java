@@ -2,6 +2,7 @@ package presentCreation;
 
 import converter.Converter;
 import entity.Present;
+import exceptions.ExceptionNumberFormat;
 import reader.Reader;
 import sweets.Biscuit;
 import sweets.Candy;
@@ -26,40 +27,45 @@ public class CreationPresentByTypingWeight {
         Reader reader = new Reader();
         Converter converter = new Converter();
         Sweets sweets;
+        ExceptionNumberFormat exceptionNumberFormat = new ExceptionNumberFormat();
 
 
         public void createPresentByTypingWeight() {
 
-           ArrayList<String> presentArray = null;
+           try {
+               ArrayList<String> presentArray = null;
 
-            writer.writeWeightForPresent();
-            String weight = reader.readString();
-            present.setTotalWeight(converter.convertStringToInt(weight));
-            int totalWeight = present.getTotalWeight();
+               writer.writeWeightForPresent();
+               String weight = reader.readString();
+               present.setTotalWeight(converter.convertStringToInt(weight));
+               int totalWeight = present.getTotalWeight();
 
-            int presentWeight = 0;
-            while (presentWeight < totalWeight) {
-                Random random = new Random();
-                int i = random.nextInt(3) + 1;
-                switch (i) {
-                    case 1:
-                        sweets = new Biscuit();
-                        break;
-                    case 2:
-                        sweets = new Chocolate();
-                        break;
-                    case 3:
-                        sweets = new Candy();
-                        break;
-                }
-                presentWeight = presentWeight + sweets.addToPresentUsingArrayList(present);
+               int presentWeight = 0;
+               while (presentWeight < totalWeight) {
+                   Random random = new Random();
+                   int i = random.nextInt(3) + 1;
+                   switch (i) {
+                       case 1:
+                           sweets = new Biscuit();
+                           break;
+                       case 2:
+                           sweets = new Chocolate();
+                           break;
+                       case 3:
+                           sweets = new Candy();
+                           break;
+                   }
+                   presentWeight = presentWeight + sweets.addToPresentUsingArrayList(present);
 
+               }
+
+
+               System.out.println("Собранный подарок исзодя из веса:" + present.getPresentArray());
+               System.out.println("Размер собранного подарка исзодя из веса:" + present.getPresentArray().size());
+           }
+            catch (NumberFormatException e){
+               exceptionNumberFormat.getExceptionNumberFormat();
             }
-
-
-            System.out.println("Собранный подарок исзодя из веса:" + present.getPresentArray());
-            System.out.println("Размер собранного подарка исзодя из веса:" + present.getPresentArray().size());
-
 
 
 
