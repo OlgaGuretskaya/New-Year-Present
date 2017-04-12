@@ -14,8 +14,7 @@ import java.util.TreeMap;
 public class WorkerForTreeMap {
 
     TimeCalculation timeCalculation = new TimeCalculation();
-    ExceptionIndexOutOfBounds exceptionIndexOutOfBounds = new ExceptionIndexOutOfBounds();
-    ExceptionNullPointer exceptionNullPointer = new ExceptionNullPointer();
+
 
     public void createPresentUsingTreeMap(Map hashMap) {
 
@@ -46,12 +45,12 @@ public class WorkerForTreeMap {
             timeCalculation.timeCalculation(startTime, endTime);
         }
         catch(NullPointerException e){
-           exceptionNullPointer.getExceptionNullPointer();
+           new ExceptionNullPointer().getExceptionNullPointer();
 
         }
        catch (IndexOutOfBoundsException e) {
 
-           exceptionIndexOutOfBounds.getExceptionIndexOutOfBoundsforMap(hashMap);
+           new ExceptionIndexOutOfBounds().getExceptionIndexOutOfBoundsforMap(hashMap);
 
        }
     }

@@ -2,8 +2,10 @@ package presentCreation;
 
 import converter.Converter;
 import entity.Present;
+import exceptions.ExceptionNullPointer;
 import exceptions.ExceptionNumberFormat;
 import exceptions.ExceptionOutofMemory;
+import exceptions.MyExceptionWeightLessThenForOneItem;
 import reader.Reader;
 import sweets.Biscuit;
 import sweets.Candy;
@@ -28,8 +30,6 @@ public class CreationPresentByTypingWeight {
         Reader reader = new Reader();
         Converter converter = new Converter();
         Sweets sweets;
-        ExceptionNumberFormat exceptionNumberFormat = new ExceptionNumberFormat();
-        ExceptionOutofMemory exceptionOutofMemory = new ExceptionOutofMemory();
 
 
         public void createPresentByTypingWeight() {
@@ -41,6 +41,10 @@ public class CreationPresentByTypingWeight {
                String weight = reader.readString();
                present.setTotalWeight(converter.convertStringToInt(weight));
                int totalWeight = present.getTotalWeight();
+                if(totalWeight<50){
+                    throw new MyExceptionWeightLessThenForOneItem();
+
+                }
 
                int presentWeight = 0;
                while (presentWeight < totalWeight) {
@@ -66,12 +70,18 @@ public class CreationPresentByTypingWeight {
                System.out.println("Размер собранного подарка исзодя из веса:" + present.getPresentArray().size());
            }
             catch (NumberFormatException e){
-               exceptionNumberFormat.getExceptionNumberFormat();
+               new ExceptionNumberFormat().getExceptionNumberFormat();
             }
             catch (OutOfMemoryError e){
-                exceptionOutofMemory.getExceptionOutofMemory();
+                new ExceptionOutofMemory().getExceptionOutofMemory();
             }
+           catch (NullPointerException e){
+               new ExceptionNullPointer().getExceptionNullPointer();
+           }
 
+            catch (MyExceptionWeightLessThenForOneItem e){
+               System.out.println(new  MyExceptionWeightLessThenForOneItem().getMsg());
+            }
 
 
         }

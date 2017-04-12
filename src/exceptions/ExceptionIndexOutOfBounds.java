@@ -31,7 +31,14 @@ public class ExceptionIndexOutOfBounds {
             System.out.println("Невозможно удалить элемент с индексом 8!");
         }
 
+    }
+
+    public void getExceptionIndexOutOfBoundsforSweetSearcher(List list){
+        if (list.size() < 56) {
+            System.out.println("Невозможно найти элемент с индексом 56!");
+        }
 
     }
+
 
 }

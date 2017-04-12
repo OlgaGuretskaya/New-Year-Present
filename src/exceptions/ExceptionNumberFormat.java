@@ -6,6 +6,7 @@ package exceptions;
 public class ExceptionNumberFormat {
 
     public void getExceptionNumberFormat() {
+
         System.out.println("Введено НЕчисловое значение!");
     }
 

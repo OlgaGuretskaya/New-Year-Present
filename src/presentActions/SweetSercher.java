@@ -1,5 +1,8 @@
 package presentActions;
 
+import exceptions.ExceptionIndexOutOfBounds;
+import exceptions.ExceptionNullPointer;
+
 import java.util.List;
 
 /**
@@ -7,15 +10,20 @@ import java.util.List;
  */
 public class SweetSercher {
 
+
     public void searchSweet(List<String> ourPresent) {
         try {
+
             System.out.println("Найти элемент с индексом 56:" + ourPresent.get(56));
 
-        } catch (NullPointerException e) {
-            System.out.println("56 айтема не существует!");
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("Нет элемента с индексом 56!");
+        }
+        catch (IndexOutOfBoundsException e) {
+            // System.out.println("Нет элемента с индексом 56!");
+           new ExceptionIndexOutOfBounds().getExceptionIndexOutOfBoundsforSweetSearcher(ourPresent);
 
+        }
+        catch (NullPointerException e){
+            new ExceptionNullPointer().getExceptionNullPointer();
         }
 
     }

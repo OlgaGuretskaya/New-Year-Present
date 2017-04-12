@@ -14,8 +14,7 @@ import java.util.List;
 public class WorkerForLinkedList {
 
     TimeCalculation timeCalculation = new TimeCalculation();
-    ExceptionIndexOutOfBounds exceptionIndexOutOfBounds = new ExceptionIndexOutOfBounds();
-    ExceptionNullPointer exceptionNullPointer = new ExceptionNullPointer();
+
 
     public void createPresentUsingLinkedList(List<String> list) {
 
@@ -35,12 +34,12 @@ public class WorkerForLinkedList {
         timeCalculation.timeCalculation(startTime, endTime);
     }
     catch(NullPointerException e){
-      exceptionNullPointer.getExceptionNullPointer();
+      new ExceptionNullPointer().getExceptionNullPointer();
 
     }
 
     catch (IndexOutOfBoundsException e) {
-        exceptionIndexOutOfBounds.getExceptionIndexOutOfBoundsforList(list);
+        new ExceptionIndexOutOfBounds().getExceptionIndexOutOfBoundsforList(list);
 
 
     }

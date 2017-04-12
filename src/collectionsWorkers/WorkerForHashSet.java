@@ -15,7 +15,7 @@ import java.util.Set;
 public class WorkerForHashSet {
 
     TimeCalculation timeCalculation = new TimeCalculation();
-    ExceptionNullPointer exceptionNullPointer = new ExceptionNullPointer();
+
 
 
     public void createPresentUsingHashSet(List<String> list) {
@@ -38,7 +38,7 @@ public class WorkerForHashSet {
             timeCalculation.timeCalculation(startTime, endTime);
         }
         catch (NullPointerException e) {
-           exceptionNullPointer.getExceptionNullPointer();
+           new ExceptionNullPointer().getExceptionNullPointer();
 
         }
     }

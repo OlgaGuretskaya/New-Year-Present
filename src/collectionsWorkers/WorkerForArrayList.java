@@ -14,8 +14,7 @@ import java.util.*;
 public class WorkerForArrayList {
 
     TimeCalculation timeCalculation = new TimeCalculation();
-    ExceptionIndexOutOfBounds exceptionIndexOutOfBounds = new ExceptionIndexOutOfBounds();
-    ExceptionNullPointer exceptionNullPointer = new ExceptionNullPointer();
+
 
     public void createPresentUsingArrayList(List<String> list) {
 
@@ -35,12 +34,12 @@ public class WorkerForArrayList {
             timeCalculation.timeCalculation(startTime, endTime);
 
         } catch (NullPointerException e) {
-            exceptionNullPointer.getExceptionNullPointer();
+            new ExceptionNullPointer().getExceptionNullPointer();
 
         }
 
        catch (IndexOutOfBoundsException e) {
-           exceptionIndexOutOfBounds.getExceptionIndexOutOfBoundsforList(list);
+           new ExceptionIndexOutOfBounds().getExceptionIndexOutOfBoundsforList(list);
 
         }
 

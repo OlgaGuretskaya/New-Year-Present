@@ -14,7 +14,7 @@ import java.util.TreeSet;
 public class WorkerForTreeSet {
 
     TimeCalculation timeCalculation = new TimeCalculation();
-    ExceptionNullPointer exceptionNullPointer = new ExceptionNullPointer();
+
 
     public void createPresentUsingTreeSet(List<String> list) {
 
@@ -37,7 +37,7 @@ public class WorkerForTreeSet {
 
        }
        catch(NullPointerException e){
-           exceptionNullPointer.getExceptionNullPointer();
+           new ExceptionNullPointer().getExceptionNullPointer();
 
        }
     }

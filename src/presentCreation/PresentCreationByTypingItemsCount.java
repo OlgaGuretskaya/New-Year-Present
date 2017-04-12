@@ -6,6 +6,7 @@ import entity.Present;
 import exceptions.ExceptionNullPointer;
 import exceptions.ExceptionNumberFormat;
 import exceptions.ExceptionOutofMemory;
+import exceptions.MyExceptionTypeItemMoreThan10000;
 import reader.Reader;
 import sweets.Biscuit;
 import sweets.Candy;
@@ -16,7 +17,6 @@ import writer.Writer;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Random;
 
 /**
@@ -29,9 +29,7 @@ public class PresentCreationByTypingItemsCount {
     Reader reader = new Reader();
     Converter converter = new Converter();
     Sweets sweets;
-    ExceptionNullPointer exceptionNullPointer = new ExceptionNullPointer();
-    ExceptionNumberFormat exceptionNumberFormat = new ExceptionNumberFormat();
-    ExceptionOutofMemory exceptionOutofMemory = new ExceptionOutofMemory();
+
 
 
     public int typeItemCount() {
@@ -40,22 +38,28 @@ public class PresentCreationByTypingItemsCount {
 
             writer.writeItemsCount();
             String item = reader.readString();
-
-
             countItems = converter.convertStringToInt(item);
-            present.setItems(countItems);
+         //  present.setItems(countItems);
 
-            if(countItems > 10000){
-                throw new IndexOutOfBoundsException(" Введенное значение больше 10000!");
-            }
 
+                if (countItems > 10000) {
+                    throw new MyExceptionTypeItemMoreThan10000();
+                }
 
         } catch (NumberFormatException e) {
-            exceptionNumberFormat.getExceptionNumberFormat();
+            new ExceptionNumberFormat().getExceptionNumberFormat();
 
         }
         catch (OutOfMemoryError e){
-            exceptionOutofMemory.getExceptionOutofMemory();
+            new ExceptionOutofMemory().getExceptionOutofMemory();
+
+        }
+        catch (NullPointerException e){
+            new ExceptionNullPointer().getExceptionNullPointer();
+        }
+        catch (MyExceptionTypeItemMoreThan10000 e){
+
+            System.out.println(new MyExceptionTypeItemMoreThan10000().getMsg());
 
         }
 
@@ -97,7 +101,7 @@ public class PresentCreationByTypingItemsCount {
         System.out.println("Собранный подарок - вес:" + totalWeight);
         }
         catch (NullPointerException e){
-           exceptionNullPointer.getExceptionNullPointer();
+           new ExceptionNullPointer().getExceptionNullPointer();
         }
 
 

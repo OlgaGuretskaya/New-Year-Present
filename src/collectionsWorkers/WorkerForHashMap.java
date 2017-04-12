@@ -14,8 +14,7 @@ import java.util.Map;
 public class WorkerForHashMap {
 
     TimeCalculation timeCalculation = new TimeCalculation();
-    ExceptionIndexOutOfBounds exceptionIndexOutOfBounds = new ExceptionIndexOutOfBounds();
-    ExceptionNullPointer exceptionNullPointer = new ExceptionNullPointer();
+
 
     public Map createPresentUsingHashMap(List<String> list) {
 
@@ -51,11 +50,11 @@ public class WorkerForHashMap {
             long endTime = timeCalculation.currentTimeMillis();
             timeCalculation.timeCalculation(startTime, endTime);
         } catch (NullPointerException e) {
-            exceptionNullPointer.getExceptionNullPointer();
+            new ExceptionNullPointer().getExceptionNullPointer();
 
         } catch (IndexOutOfBoundsException e) {
 
-            exceptionIndexOutOfBounds.getExceptionIndexOutOfBoundsforMap(hashMap);
+            new ExceptionIndexOutOfBounds().getExceptionIndexOutOfBoundsforMap(hashMap);
 
         }
         return hashMap;
