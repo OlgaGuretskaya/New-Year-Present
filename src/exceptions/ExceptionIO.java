@@ -3,7 +3,7 @@ package exceptions;
 /**
  * Created by volha_huretskaya on 4/11/17.
  */
-public class ExceptionIO {
+public class ExceptionIO extends Exception{
 
     public void getIOExceptionWriteFile(){
 

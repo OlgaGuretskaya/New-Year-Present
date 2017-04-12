@@ -1,5 +1,7 @@
 package fileWorker;
 
+import exceptions.ExceptionIO;
+
 import java.util.List;
 import java.io.*;
 
@@ -26,8 +28,9 @@ public class FileWriter {
         } catch (FileNotFoundException e) {
            e.printStackTrace();
         } catch (IOException e) {
-            e.printStackTrace();
+            new ExceptionIO().getIOExceptionWriteFile();
         }
+
 
 
     }

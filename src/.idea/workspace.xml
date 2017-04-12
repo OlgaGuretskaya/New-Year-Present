@@ -26,8 +26,8 @@
       <file leaf-file-name="FileWriter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fileWorker/FileWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="381">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,22 +45,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Chocolate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sweets/Chocolate.java">
+      <file leaf-file-name="ExceptionIO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exceptions/ExceptionIO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="75">
+              <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeCalculation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/timeCalculation/TimeCalculation.java">
+      <file leaf-file-name="ExceptionNullPointer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/exceptions/ExceptionNullPointer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="135">
+              <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+              <folding>
+                <element signature="e#151#152#0" expanded="true" />
+                <element signature="e#199#200#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,7 +91,7 @@
       <file leaf-file-name="CreationPresentByTypingWeight.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/presentCreation/CreationPresentByTypingWeight.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="824">
+            <state relative-caret-position="525">
               <caret line="82" column="86" lean-forward="false" selection-start-line="82" selection-start-column="86" selection-end-line="82" selection-end-column="86" />
               <folding />
             </state>
@@ -141,7 +144,6 @@
         <option value="$PROJECT_DIR$/exceptions/ExcptionIndexOutOfBounds.java" />
         <option value="$PROJECT_DIR$/exceptions/ExceptionNullPointer.java" />
         <option value="$PROJECT_DIR$/exceptions/ExceptionOutofMemory.java" />
-        <option value="$PROJECT_DIR$/exceptions/ExceptionIO.java" />
         <option value="$PROJECT_DIR$/exceptions/ExceptionNoSuchElement.java" />
         <option value="$PROJECT_DIR$/exceptions/ExceptionIndexOutOfBounds.java" />
         <option value="$PROJECT_DIR$/exceptions/MyExceptionTypeMoreThan10000.java" />
@@ -159,6 +161,7 @@
         <option value="$PROJECT_DIR$/presentCreation/PresentCreationByTypingItemsCount.java" />
         <option value="$PROJECT_DIR$/converter/Converter.java" />
         <option value="$PROJECT_DIR$/Starter.java" />
+        <option value="$PROJECT_DIR$/exceptions/ExceptionIO.java" />
         <option value="$PROJECT_DIR$/fileWorker/FileWriter.java" />
       </list>
     </option>
@@ -201,6 +204,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="presentCreation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -690,12 +707,12 @@
       <option name="presentableId" value="Default" />
       <updated>1491899607177</updated>
       <workItem from="1491899608520" duration="13009000" />
-      <workItem from="1491983281005" duration="13766000" />
+      <workItem from="1491983281005" duration="14150000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26775000" />
+    <option name="totallyTimeSpent" value="27159000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="978" extended-state="6" />
@@ -778,8 +795,8 @@
         <state relative-caret-position="135">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#151#152#0" expanded="false" />
-            <element signature="e#199#200#0" expanded="false" />
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -849,14 +866,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exceptions/ExceptionIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -975,17 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exceptions/ExceptionNullPointer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding>
-            <element signature="e#151#152#0" expanded="false" />
-            <element signature="e#199#200#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/presentActions/PresentSorting.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1071,14 +1069,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/presentCreation/CreationPresentByTypingWeight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="82" column="86" lean-forward="false" selection-start-line="82" selection-start-column="86" selection-end-line="82" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/presentCreation/PresentCreationByTypingItemsCount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -1103,10 +1093,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/presentCreation/CreationPresentByTypingWeight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="82" column="86" lean-forward="false" selection-start-line="82" selection-start-column="86" selection-end-line="82" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exceptions/ExceptionNullPointer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="e#151#152#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exceptions/ExceptionIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fileWorker/FileWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="381">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
