@@ -1,4 +1,5 @@
 import collectionsWorkers.*;
+import fileWorker.FileWriter;
 import presentActions.PresentSorting;
 import presentActions.SweetSercher;
 import presentCreation.CreationPresentByTypingWeight;
@@ -23,10 +24,14 @@ public class Starter {
         WorkerForTreeSet workerForTreeSet = new WorkerForTreeSet();
         PresentSorting presentSorting = new PresentSorting();
         SweetSercher sweetSercher = new SweetSercher();
+        FileWriter fileWriter = new FileWriter();
 
         creationPresentByTypingWeight.createPresentByTypingWeight();
         int presentItems = presentCreationByTypingItemsCount.typeItemCount();
         List<String> ourPresent = presentCreationByTypingItemsCount.createPresent(presentItems);
+
+        fileWriter.writeToFile(ourPresent);
+
         sweetSercher.searchSweet(ourPresent);
         presentSorting.sortPresent(ourPresent);
         workerForArrayList.createPresentUsingArrayList(ourPresent);

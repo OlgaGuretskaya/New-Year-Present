@@ -39,7 +39,6 @@ public class PresentCreationByTypingItemsCount {
             writer.writeItemsCount();
             String item = reader.readString();
             countItems = converter.convertStringToInt(item);
-         //  present.setItems(countItems);
 
 
                 if (countItems > 10000) {
