@@ -7,6 +7,7 @@ import exceptions.ExceptionNullPointer;
 import exceptions.ExceptionNumberFormat;
 import exceptions.ExceptionOutofMemory;
 import exceptions.MyExceptionTypeItemMoreThan10000;
+import fileWorker.FileRead;
 import reader.Reader;
 import sweets.Biscuit;
 import sweets.Candy;
@@ -29,16 +30,17 @@ public class PresentCreationByTypingItemsCount {
     Reader reader = new Reader();
     Converter converter = new Converter();
     Sweets sweets;
+    FileRead fileRead = new FileRead();
 
 
 
     public int typeItemCount() {
         int countItems = 0;
         try {
-
-            writer.writeItemsCount();
-            String item = reader.readString();
-            countItems = converter.convertStringToInt(item);
+                countItems = fileRead.readFile();
+            //writer.writeItemsCount();
+           // String item = reader.readString();
+           // countItems = converter.convertStringToInt(item);
 
 
                 if (countItems > 10000) {

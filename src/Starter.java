@@ -1,19 +1,23 @@
 import collectionsWorkers.*;
+import fileWorker.FileRead;
 import fileWorker.FileWriter;
 import presentActions.PresentSorting;
 import presentActions.SweetSercher;
 import presentCreation.CreationPresentByTypingWeight;
 import presentCreation.PresentCreationByTypingItemsCount;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 /**
  * Created by Olga on 21.03.2017.
  */
 public class Starter {
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         CreationPresentByTypingWeight creationPresentByTypingWeight = new CreationPresentByTypingWeight();
         PresentCreationByTypingItemsCount presentCreationByTypingItemsCount = new PresentCreationByTypingItemsCount();
         WorkerForArrayList workerForArrayList = new WorkerForArrayList();
@@ -25,6 +29,9 @@ public class Starter {
         PresentSorting presentSorting = new PresentSorting();
         SweetSercher sweetSercher = new SweetSercher();
         FileWriter fileWriter = new FileWriter();
+        FileRead fileReader = new FileRead();
+
+        fileReader.readFile();
 
         creationPresentByTypingWeight.createPresentByTypingWeight();
         int presentItems = presentCreationByTypingItemsCount.typeItemCount();
@@ -42,4 +49,10 @@ public class Starter {
         workerForTreeMap.createPresentUsingTreeMap(hashMap);
     }
 
+
+
+
 }
+
+
+
