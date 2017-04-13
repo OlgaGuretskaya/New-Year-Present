@@ -15,8 +15,13 @@ public class FileWriter {
 
 
         try {
-            OutputStream f = new FileOutputStream("Present.txt", true);
-            OutputStreamWriter writer = new OutputStreamWriter(f);
+
+            File newfile = new File("Present.txt");
+            if(newfile.exists()){
+                newfile.delete();
+            }
+            OutputStream file = new FileOutputStream("Present.txt", true);
+            OutputStreamWriter writer = new OutputStreamWriter(file);
             BufferedWriter out = new BufferedWriter(writer);
             out.write("Собранный подарок:");
             for(int i = 0; i < list.size(); i++)
@@ -24,6 +29,7 @@ public class FileWriter {
                 out.write("Item -" + list.get(i) + ";");
                 out.flush();
             }
+
 
         } catch (FileNotFoundException e) {
            e.printStackTrace();
