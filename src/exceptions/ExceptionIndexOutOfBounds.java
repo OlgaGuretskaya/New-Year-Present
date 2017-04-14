@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Created by volha_huretskaya on 4/11/17.
  */
-public class ExceptionIndexOutOfBounds {
+public class ExceptionIndexOutOfBounds extends Exception {
 
     public void getExceptionIndexOutOfBoundsforList(List list) {
         if (list.size() < 4) {

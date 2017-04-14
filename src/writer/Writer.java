@@ -12,4 +12,10 @@ public class Writer {
     public void writeItemsCount(){
         System.out.println("Введите требуемое количество айтемов в подарке, но не более 10000:");
     }
+
+    public void chooseSourseForItemCount(){
+        System.out.println("Введите 1, если хотите напечатать количество айтемов в консоли, или 2, если хотите считать количество айтемов из файла:");
+
+    }
+
 }

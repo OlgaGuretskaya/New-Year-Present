@@ -11,9 +11,4 @@ public class ExceptionIO extends Exception{
 
     }
 
-    public void getIOExceptionReadFile(){
-
-        System.out.println("Ошибка во время чтения файла!");
-
     }
-}

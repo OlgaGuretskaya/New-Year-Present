@@ -33,32 +33,27 @@ public class PresentCreationByTypingItemsCount {
     FileRead fileRead = new FileRead();
 
 
-
     public int typeItemCount() {
         int countItems = 0;
         try {
-                countItems = fileRead.readFile();
-            //writer.writeItemsCount();
-           // String item = reader.readString();
-           // countItems = converter.convertStringToInt(item);
+            writer.writeItemsCount();
+            String item = reader.readString();
+            countItems = converter.convertStringToInt(item);
 
 
-                if (countItems > 10000) {
-                    throw new MyExceptionTypeItemMoreThan10000();
-                }
+            if (countItems > 10000) {
+                throw new MyExceptionTypeItemMoreThan10000();
+            }
 
         } catch (NumberFormatException e) {
             new ExceptionNumberFormat().getExceptionNumberFormat();
 
-        }
-        catch (OutOfMemoryError e){
+        } catch (OutOfMemoryError e) {
             new ExceptionOutofMemory().getExceptionOutofMemory();
 
-        }
-        catch (NullPointerException e){
+        } catch (NullPointerException e) {
             new ExceptionNullPointer().getExceptionNullPointer();
-        }
-        catch (MyExceptionTypeItemMoreThan10000 e){
+        } catch (MyExceptionTypeItemMoreThan10000 e) {
 
             System.out.println(new MyExceptionTypeItemMoreThan10000().getMsg());
 
@@ -72,37 +67,36 @@ public class PresentCreationByTypingItemsCount {
 
     public List<String> createPresent(int presentItems) {
         List<String> ourPresent = new ArrayList<String>();
-        try{
-        int totalWeight = 0;
-        int countItem = 0;
-        while (countItem < presentItems) {
-            Random random = new Random();
-            int i = random.nextInt(3) + 1;
-            switch (i) {
-                case 1:
-                    sweets = new Biscuit();
-                    break;
-                case 2:
-                    sweets = new Candy();
-                    break;
-                case 3:
-                    sweets = new Chocolate();
-                    break;
-            }
-            int weight = sweets.addToPresentUsingArrayList(present);
-            totalWeight = weight + totalWeight;
+        try {
+            int totalWeight = 0;
+            int countItem = 0;
+            while (countItem < presentItems) {
+                Random random = new Random();
+                int i = random.nextInt(3) + 1;
+                switch (i) {
+                    case 1:
+                        sweets = new Biscuit();
+                        break;
+                    case 2:
+                        sweets = new Candy();
+                        break;
+                    case 3:
+                        sweets = new Chocolate();
+                        break;
+                }
+                int weight = sweets.addToPresentUsingArrayList(present);
+                totalWeight = weight + totalWeight;
 
-            countItem++;
-        }
-        ourPresent = present.getPresentArray();
-        if(ourPresent.isEmpty()){
-         throw new NullPointerException();
-       }
-        System.out.println("Собранный подарок:" + ourPresent);
-        System.out.println("Собранный подарок - вес:" + totalWeight);
-        }
-        catch (NullPointerException e){
-           new ExceptionNullPointer().getExceptionNullPointer();
+                countItem++;
+            }
+            ourPresent = present.getPresentArray();
+            if (ourPresent.isEmpty()) {
+                throw new NullPointerException();
+            }
+            System.out.println("Собранный подарок:" + ourPresent);
+            System.out.println("Собранный подарок - вес:" + totalWeight);
+        } catch (NullPointerException e) {
+            new ExceptionNullPointer().getExceptionNullPointer();
         }
 
 

@@ -17,7 +17,7 @@ import java.util.Scanner;
  */
 public class Starter {
 
-   public static void main(String[] args) {
+    public static void main(String[] args) {
         CreationPresentByTypingWeight creationPresentByTypingWeight = new CreationPresentByTypingWeight();
         PresentCreationByTypingItemsCount presentCreationByTypingItemsCount = new PresentCreationByTypingItemsCount();
         WorkerForArrayList workerForArrayList = new WorkerForArrayList();
@@ -30,15 +30,12 @@ public class Starter {
         SweetSercher sweetSercher = new SweetSercher();
         FileWriter fileWriter = new FileWriter();
         FileRead fileReader = new FileRead();
-
-        fileReader.readFile();
+        ChoiceForTypingItemCount choiceForTypingItemCount = new ChoiceForTypingItemCount();
 
         creationPresentByTypingWeight.createPresentByTypingWeight();
-        int presentItems = presentCreationByTypingItemsCount.typeItemCount();
+        int presentItems = choiceForTypingItemCount.chooseSourceForCountItems();
         List<String> ourPresent = presentCreationByTypingItemsCount.createPresent(presentItems);
-
         fileWriter.writeToFile(ourPresent);
-
         sweetSercher.searchSweet(ourPresent);
         presentSorting.sortPresent(ourPresent);
         workerForArrayList.createPresentUsingArrayList(ourPresent);
@@ -48,8 +45,6 @@ public class Starter {
         Map<Integer, String> hashMap = workerForHashMap.createPresentUsingHashMap(ourPresent);
         workerForTreeMap.createPresentUsingTreeMap(hashMap);
     }
-
-
 
 
 }
