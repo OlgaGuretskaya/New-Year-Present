@@ -18,27 +18,23 @@ public class WorkerForTreeSet {
 
     public void createPresentUsingTreeSet(List<String> list) {
 
-       try {
-           Set<String> tree = new TreeSet<String>(list);
+        try {
+            Set<String> treeSet = new TreeSet<String>(list);
 
-           long startTime = timeCalculation.currentTimeMillis();
-           System.out.println("  ");
-           System.out.println("Собранный подарок в TreeSet list:" + tree);
-           System.out.println("Элемент из списка по хеш-коду :" + tree.hashCode());
-           System.out.println("Есть ли элемент 'Милка' в списке:" + tree.contains("Милка"));
-           System.out.println("Удалить элемент 'Сникерс' из списка:" + tree.remove("Cникерс"));
-           System.out.println("Размер после удаления:" + tree.size());
-           tree.add("Леденец");
-           System.out.println("TreeMap c добавленным элементом 'Леденец':" + tree);
-           System.out.println("Размер после добавления:" + tree.size());
-           long endTime = timeCalculation.currentTimeMillis();
-           timeCalculation.timeCalculation(startTime, endTime);
+            long startTime = timeCalculation.currentTimeMillis();
 
+            treeSet.hashCode();
+            treeSet.contains("Милка");
+            treeSet.remove("Cникерс");
+            treeSet.add("Леденец");
 
-       }
-       catch(NullPointerException e){
-           new ExceptionNullPointer().getExceptionNullPointer();
+            String collectionName = "TreeSet";
+            long endTime = timeCalculation.currentTimeMillis();
+            timeCalculation.timeCalculation(startTime, endTime, collectionName);
 
-       }
+        } catch (NullPointerException e) {
+            new ExceptionNullPointer().getExceptionNullPointer();
+
+        }
     }
 }

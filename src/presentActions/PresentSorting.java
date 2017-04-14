@@ -9,18 +9,15 @@ import java.util.List;
  */
 public class PresentSorting {
 
-    public void sortPresent(List<String> ourPresent){
-
+    public void sortPresent(List<String> ourPresent) {
 
         try {
             Collections.sort(ourPresent);
 
-            int i = 0;
             for (String item : ourPresent) {
             }
             System.out.println("Сортированный подарок по наименованию сладостей:" + ourPresent);
-        }
-        catch (NullPointerException e){
+        } catch (NullPointerException e) {
             System.out.println("Нет подарка -> нет сортировки!");
         }
     }

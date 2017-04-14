@@ -11,31 +11,34 @@ import java.util.Random;
 /**
  * Created by Olga on 21.03.2017.
  */
-public class Candy implements Sweets{
+public class Candy implements Sweets {
     @Override
     public int addToPresentUsingArrayList(Present present) {
-        CandyData candyData= new CandyData();
+        CandyData candyData = new CandyData();
         List<String> candy = null;
         Random random = new Random();
-        int i = random.nextInt(3)+1;
-        switch(i){
-            case 1: candy = candyData.getCandy1();
+        int i = random.nextInt(3) + 1;
+        switch (i) {
+            case 1:
+                candy = candyData.getCandy1();
                 break;
-            case 2: candy = candyData.getCandy2();
+            case 2:
+                candy = candyData.getCandy2();
                 break;
-            case 3: candy = candyData.getCandy3();
+            case 3:
+                candy = candyData.getCandy3();
                 break;
 
         }
 
         String weight = candy.get(2);
         Converter converter = new Converter();
-        int candyWeight = converter.convertStringToInt(weight) ;
+        int candyWeight = converter.convertStringToInt(weight);
 
-
-       // Present present = new Present();
         ArrayList<String> ourPresent = present.getPresentArray();
-        if(ourPresent == null){ourPresent = new ArrayList<>();}
+        if (ourPresent == null) {
+            ourPresent = new ArrayList<>();
+        }
         String item = candy.get(0);
         ourPresent.add(item);
         present.setPresentArray(ourPresent);

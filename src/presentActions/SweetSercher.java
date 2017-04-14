@@ -10,19 +10,15 @@ import java.util.List;
  */
 public class SweetSercher {
 
-
     public void searchSweet(List<String> ourPresent) {
         try {
 
             System.out.println("Найти элемент с индексом 56:" + ourPresent.get(56));
 
-        }
-        catch (IndexOutOfBoundsException e) {
-            // System.out.println("Нет элемента с индексом 56!");
-           new ExceptionIndexOutOfBounds().getExceptionIndexOutOfBoundsforSweetSearcher(ourPresent);
+        } catch (IndexOutOfBoundsException e) {
+            new ExceptionIndexOutOfBounds().getExceptionIndexOutOfBoundsforSweetSearcher(ourPresent);
 
-        }
-        catch (NullPointerException e){
+        } catch (NullPointerException e) {
             new ExceptionNullPointer().getExceptionNullPointer();
         }
 

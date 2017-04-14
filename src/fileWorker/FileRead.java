@@ -2,11 +2,9 @@ package fileWorker;
 
 import converter.Converter;
 import exceptions.ExceptionFileNotFound;
-import exceptions.ExceptionIO;
 
 import java.io.*;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+
 
 /**
  * Created by volha_huretskaya on 4/12/17.
@@ -18,7 +16,6 @@ public class FileRead {
     public int readFile() {
 
         int x = 0;
-
 
         try {
             File q = new File("input.txt");

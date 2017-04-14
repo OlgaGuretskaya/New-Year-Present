@@ -7,13 +7,14 @@ public class MyExceptionChooseCorrectNumber extends Exception {
 
     String msg;
 
-    public MyExceptionChooseCorrectNumber(){
+    public MyExceptionChooseCorrectNumber() {
 
         msg = "ВНИМАНИЕ!!! Введите 1 или 2!!!";
 
     }
 
     public String getMsg() {
+
         return msg;
     }
 }

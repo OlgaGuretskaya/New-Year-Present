@@ -23,23 +23,19 @@ public class WorkerForArrayList {
             List<String> ourPresent = new ArrayList<String>(list);
             System.out.println(" ");
             long startTime = timeCalculation.currentTimeMillis();
-            System.out.println("Собранный подарок в Arraylist:" + ourPresent);
-            System.out.println("Есть ли элемент 'Милка' в списке:" + ourPresent.contains("Милка"));
-            System.out.println("Элемент из списка по индексу 3:" + ourPresent.get(3));
-            System.out.println("Удалить элемент из списка с индексом 8:" + ourPresent.remove(8));
-            System.out.println("Размер после удаления:" + ourPresent.size());
+            ourPresent.contains("Милка");
+            ourPresent.get(3);
+            ourPresent.remove(8);
             ourPresent.add(88, "Жвачка");
-            System.out.println("Array list c добавленным элементом 'Жвачка' с индексом 88:" + ourPresent);
+            String collectionName = "Arraylist";
             long endTime = timeCalculation.currentTimeMillis();
-            timeCalculation.timeCalculation(startTime, endTime);
+            timeCalculation.timeCalculation(startTime, endTime, collectionName);
 
         } catch (NullPointerException e) {
             new ExceptionNullPointer().getExceptionNullPointer();
 
-        }
-
-       catch (IndexOutOfBoundsException e) {
-           new ExceptionIndexOutOfBounds().getExceptionIndexOutOfBoundsforList(list);
+        } catch (IndexOutOfBoundsException e) {
+            new ExceptionIndexOutOfBounds().getExceptionIndexOutOfBoundsforList(list);
 
         }
 

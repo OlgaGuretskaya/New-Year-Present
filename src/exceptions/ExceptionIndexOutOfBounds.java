@@ -17,23 +17,23 @@ public class ExceptionIndexOutOfBounds extends Exception {
             System.out.println("Невозможно удалить элемент с индексом 8!");
         }
 
-             if (list.size() <= 87) {
+        if (list.size() <= 87) {
             System.out.println("Невозможно добавить элемент с индексом 88!");
         }
     }
 
-    public void getExceptionIndexOutOfBoundsforMap(Map map) {
+    public void getExceptionIndexOutOfBoundsforMap(Map<Integer, String> map) {
         if (map.size() < 5) {
-           System.out.println("Невозможно найти элемент с индексом 3!");
+            System.out.println("Невозможно найти элемент с индексом 3!");
         }
 
-        if (map.size() < 9) {
-            System.out.println("Невозможно удалить элемент с индексом 8!");
+        if (map.size() < 10) {
+            System.out.println("Невозможно удалить элемент с индексом 9!");
         }
 
     }
 
-    public void getExceptionIndexOutOfBoundsforSweetSearcher(List list){
+    public void getExceptionIndexOutOfBoundsforSweetSearcher(List list) {
         if (list.size() < 56) {
             System.out.println("Невозможно найти элемент с индексом 56!");
         }

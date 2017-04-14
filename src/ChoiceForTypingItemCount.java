@@ -10,6 +10,7 @@ import writer.Writer;
  * Created by volha_huretskaya on 4/14/17.
  */
 public class ChoiceForTypingItemCount {
+
     Writer writer = new Writer();
     Reader reader = new Reader();
     Converter converter = new Converter();
@@ -24,8 +25,9 @@ public class ChoiceForTypingItemCount {
             String sourceCountItem = reader.readString();
             int source = converter.convertStringToInt(sourceCountItem);
 
-            if(source != 1 & source != 2){
-                throw new MyExceptionChooseCorrectNumber();            }
+            if (source != 1 & source != 2) {
+                throw new MyExceptionChooseCorrectNumber();
+            }
 
             if (source == 1) {
                 itemCount = presentCreationByTypingItemsCount.typeItemCount();
@@ -36,8 +38,7 @@ public class ChoiceForTypingItemCount {
         } catch (NumberFormatException e) {
             new ExceptionNumberFormat().getExceptionNumberFormat();
 
-        }
-        catch (MyExceptionChooseCorrectNumber e){
+        } catch (MyExceptionChooseCorrectNumber e) {
             System.out.println(new MyExceptionChooseCorrectNumber().getMsg());
         }
 

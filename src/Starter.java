@@ -29,7 +29,6 @@ public class Starter {
         PresentSorting presentSorting = new PresentSorting();
         SweetSercher sweetSercher = new SweetSercher();
         FileWriter fileWriter = new FileWriter();
-        FileRead fileReader = new FileRead();
         ChoiceForTypingItemCount choiceForTypingItemCount = new ChoiceForTypingItemCount();
 
         creationPresentByTypingWeight.createPresentByTypingWeight();

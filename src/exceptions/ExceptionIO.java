@@ -3,12 +3,12 @@ package exceptions;
 /**
  * Created by volha_huretskaya on 4/11/17.
  */
-public class ExceptionIO extends Exception{
+public class ExceptionIO extends Exception {
 
-    public void getIOExceptionWriteFile(){
+    public void getIOExceptionWriteFile() {
 
         System.out.println("Ошибка во время записи файла!");
 
     }
 
-    }
+}

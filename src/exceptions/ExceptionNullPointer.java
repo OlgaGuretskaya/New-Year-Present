@@ -6,6 +6,7 @@ package exceptions;
 public class ExceptionNullPointer extends Exception {
 
     public void getExceptionNullPointer() {
+
         System.out.println("Нет листа!");
     }
 

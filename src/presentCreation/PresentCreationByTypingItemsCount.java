@@ -6,7 +6,7 @@ import entity.Present;
 import exceptions.ExceptionNullPointer;
 import exceptions.ExceptionNumberFormat;
 import exceptions.ExceptionOutofMemory;
-import exceptions.MyExceptionTypeItemMoreThan10000;
+import exceptions.MyExceptionTypeItemLessThan10000;
 import fileWorker.FileRead;
 import reader.Reader;
 import sweets.Biscuit;
@@ -40,9 +40,8 @@ public class PresentCreationByTypingItemsCount {
             String item = reader.readString();
             countItems = converter.convertStringToInt(item);
 
-
-            if (countItems > 10000) {
-                throw new MyExceptionTypeItemMoreThan10000();
+            if (countItems < 10000) {
+                throw new MyExceptionTypeItemLessThan10000();
             }
 
         } catch (NumberFormatException e) {
@@ -53,15 +52,14 @@ public class PresentCreationByTypingItemsCount {
 
         } catch (NullPointerException e) {
             new ExceptionNullPointer().getExceptionNullPointer();
-        } catch (MyExceptionTypeItemMoreThan10000 e) {
 
-            System.out.println(new MyExceptionTypeItemMoreThan10000().getMsg());
+        } catch (MyExceptionTypeItemLessThan10000 e) {
+
+            System.out.println(new MyExceptionTypeItemLessThan10000().getMsg());
 
         }
 
-
         return countItems;
-
 
     }
 
@@ -90,15 +88,17 @@ public class PresentCreationByTypingItemsCount {
                 countItem++;
             }
             ourPresent = present.getPresentArray();
+
             if (ourPresent.isEmpty()) {
                 throw new NullPointerException();
+
             }
             System.out.println("Собранный подарок:" + ourPresent);
-            System.out.println("Собранный подарок - вес:" + totalWeight);
+            System.out.println("Вес собранного подарка:" + totalWeight);
+
         } catch (NullPointerException e) {
             new ExceptionNullPointer().getExceptionNullPointer();
         }
-
 
         return ourPresent;
     }

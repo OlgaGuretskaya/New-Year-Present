@@ -6,15 +6,15 @@ import java.util.*;
  * Created by Olga on 21.03.2017.
  */
 public class Present {
- private ArrayList<String> presentArray;
- private LinkedList<String> presentLinked;
- private HashSet<String> presentHashSet;
- private TreeSet<String> presentTreeSet;
- private HashMap<Integer, String> presentHashMap;
- private TreeMap<Integer, String> presentTreeMap;
+    private ArrayList<String> presentArray;
+    private LinkedList<String> presentLinked;
+    private HashSet<String> presentHashSet;
+    private TreeSet<String> presentTreeSet;
+    private HashMap<Integer, String> presentHashMap;
+    private TreeMap<Integer, String> presentTreeMap;
 
- private int totalWeight;
- private int items;
+    private int totalWeight;
+    private int items;
 
     public Present() {
     }

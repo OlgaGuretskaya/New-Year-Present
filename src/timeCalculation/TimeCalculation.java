@@ -6,17 +6,17 @@ package timeCalculation;
 public class TimeCalculation {
 
 
-    public long currentTimeMillis(){
+    public long currentTimeMillis() {
 
         long time = System.currentTimeMillis();
         return time;
 
     }
 
-    public void timeCalculation(long startTime, long endTime) {
+    public void timeCalculation(long startTime, long endTime, String collectionName) {
         long timeSpent = endTime - startTime;
 
-        System.out.println("программа выполнялась:" + timeSpent + " миллисекунд");
+        System.out.println("Программа выполнялась для " + collectionName + ":" + timeSpent + " миллисекунд");
     }
 
 }

@@ -5,8 +5,8 @@ package exceptions;
  */
 public class ExceptionOutofMemory extends Exception {
 
-    public void getExceptionOutofMemory () {
+    public void getExceptionOutofMemory() {
 
-        System.out.println("Закончилась память");
+        System.out.println("Закончилась память!");
     }
 }

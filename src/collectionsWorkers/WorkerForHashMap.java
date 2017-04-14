@@ -33,22 +33,19 @@ public class WorkerForHashMap {
             }
 
             long startTime = timeCalculation.currentTimeMillis();
-            System.out.println("   ");
-            System.out.println("Собранный подарок в HashMap list:" + hashMap);
-            System.out.println("Есть ли элемент 'Милка' в списке:" + hashMap.containsValue("Милка"));
+
+            hashMap.containsValue("Милка");
             hashMap.put(88, "Мамба");
-            System.out.println("HashMap c добавленным элементом 'Мамба' с индексом 88:" + hashMap);
-            if(hashMap.get(3) == null || hashMap.remove(8)== null){
+
+            if (hashMap.get(3) == null || hashMap.remove(8) == null) {
                 throw new IndexOutOfBoundsException();
             }
-            System.out.println("Элемент из списка по индексу 3:" + hashMap.get(3));
+            hashMap.get(3);
+            hashMap.remove(8);
 
-            System.out.println("Удалить элемент из списка с индексом 8:" + hashMap.remove(8));
-            System.out.println("Размер после удаления:" + hashMap.size());
-
-            System.out.println("Размер после добавления:" + hashMap.size());
+            String collectionName = "HashMap";
             long endTime = timeCalculation.currentTimeMillis();
-            timeCalculation.timeCalculation(startTime, endTime);
+            timeCalculation.timeCalculation(startTime, endTime, collectionName);
         } catch (NullPointerException e) {
             new ExceptionNullPointer().getExceptionNullPointer();
 

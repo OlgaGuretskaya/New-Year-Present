@@ -3,13 +3,13 @@ package exceptions;
 /**
  * Created by volha_huretskaya on 4/12/17.
  */
-public class MyExceptionWeightLessThenForOneItem extends Exception{
+public class MyExceptionWeightLessThenForOneItem extends Exception {
 
     String msg;
 
-    public MyExceptionWeightLessThenForOneItem(){
+    public MyExceptionWeightLessThenForOneItem() {
 
-        msg = "ВНИМАНИЕ!!! Введен вес меньше чем для 1 айтема!";
+        msg = "ВНИМАНИЕ!!! Введен вес меньше, чем для 1 айтема!";
 
     }
 
