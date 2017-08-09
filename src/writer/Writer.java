@@ -10,7 +10,7 @@ public class Writer {
     }
 
     public void writeItemsCount(){
-        System.out.println("Введите требуемое количество айтемов в подарке, но не более 10000:");
+        System.out.println("Введите требуемое количество айтемов в подарке, но не менее 7000:");
     }
 
     public void chooseSourseForItemCount(){

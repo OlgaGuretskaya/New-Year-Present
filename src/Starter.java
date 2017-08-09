@@ -1,16 +1,11 @@
 import collectionsWorkers.*;
-import fileWorker.FileRead;
 import fileWorker.FileWriter;
 import presentActions.PresentSorting;
 import presentActions.SweetSercher;
-import presentCreation.CreationPresentByTypingWeight;
 import presentCreation.PresentCreationByTypingItemsCount;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
 
 /**
  * Created by Olga on 21.03.2017.
@@ -18,7 +13,7 @@ import java.util.Scanner;
 public class Starter {
 
     public static void main(String[] args) {
-        CreationPresentByTypingWeight creationPresentByTypingWeight = new CreationPresentByTypingWeight();
+
         PresentCreationByTypingItemsCount presentCreationByTypingItemsCount = new PresentCreationByTypingItemsCount();
         WorkerForArrayList workerForArrayList = new WorkerForArrayList();
         WorkerForLinkedList workerForLinkedList = new WorkerForLinkedList();
@@ -31,7 +26,7 @@ public class Starter {
         FileWriter fileWriter = new FileWriter();
         ChoiceForTypingItemCount choiceForTypingItemCount = new ChoiceForTypingItemCount();
 
-        creationPresentByTypingWeight.createPresentByTypingWeight();
+
         int presentItems = choiceForTypingItemCount.chooseSourceForCountItems();
         List<String> ourPresent = presentCreationByTypingItemsCount.createPresent(presentItems);
         fileWriter.writeToFile(ourPresent);

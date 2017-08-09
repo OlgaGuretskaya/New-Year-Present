@@ -3,9 +3,14 @@ package converter;
 import java.util.List;
 
 /**
- * Created by Olga on 21.03.2017.
+ * Используется для конвертации переменных
  */
 public class Converter {
+    /**
+     * Метод сонвертации строки в число
+     * @param value
+     * @return
+     */
     public int convertStringToInt(String value) {
 
         return Integer.parseInt(value);

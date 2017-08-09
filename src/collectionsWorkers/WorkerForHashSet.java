@@ -10,18 +10,23 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created by volha_huretskaya on 4/5/17.
+ * Используется для измерения скорости работы HashSet
  */
 public class WorkerForHashSet {
 
     TimeCalculation timeCalculation = new TimeCalculation();
 
-
+    /**
+     * Метод измерения скорости работы HashSet
+     * @param list
+     */
     public void createPresentUsingHashSet(List<String> list) {
 
 
         try {
-
+            /**
+             * HashSet созданного подарка
+             */
             Set<String> hashSet = new HashSet<String>(list);
             long startTime = timeCalculation.currentTimeMillis();
 
@@ -33,6 +38,7 @@ public class WorkerForHashSet {
             String collectionName = "HashSet";
             long endTime = timeCalculation.currentTimeMillis();
             timeCalculation.timeCalculation(startTime, endTime, collectionName);
+
         } catch (NullPointerException e) {
             new ExceptionNullPointer().getExceptionNullPointer();
 

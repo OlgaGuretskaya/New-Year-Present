@@ -9,16 +9,22 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * Created by volha_huretskaya on 4/5/17.
+ * Используется для измерения скорости работы TreeSet
  */
 public class WorkerForTreeSet {
 
     TimeCalculation timeCalculation = new TimeCalculation();
 
-
+    /**
+     * Метод измерения скорости работы TreeSet
+     * @param list
+     */
     public void createPresentUsingTreeSet(List<String> list) {
 
         try {
+            /**
+             * TreeSet созданного подарка
+             */
             Set<String> treeSet = new TreeSet<String>(list);
 
             long startTime = timeCalculation.currentTimeMillis();

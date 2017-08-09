@@ -6,7 +6,7 @@ import entity.Present;
 import exceptions.ExceptionNullPointer;
 import exceptions.ExceptionNumberFormat;
 import exceptions.ExceptionOutofMemory;
-import exceptions.MyExceptionTypeItemLessThan10000;
+import exceptions.MyExceptionTypeItemLessThan7000;
 import fileWorker.FileRead;
 import reader.Reader;
 import sweets.Biscuit;
@@ -40,8 +40,8 @@ public class PresentCreationByTypingItemsCount {
             String item = reader.readString();
             countItems = converter.convertStringToInt(item);
 
-            if (countItems < 10000) {
-                throw new MyExceptionTypeItemLessThan10000();
+            if (countItems < 7000) {
+                throw new MyExceptionTypeItemLessThan7000();
             }
 
         } catch (NumberFormatException e) {
@@ -53,9 +53,9 @@ public class PresentCreationByTypingItemsCount {
         } catch (NullPointerException e) {
             new ExceptionNullPointer().getExceptionNullPointer();
 
-        } catch (MyExceptionTypeItemLessThan10000 e) {
+        } catch (MyExceptionTypeItemLessThan7000 e) {
 
-            System.out.println(new MyExceptionTypeItemLessThan10000().getMsg());
+            System.out.println(new MyExceptionTypeItemLessThan7000().getMsg());
 
         }
 

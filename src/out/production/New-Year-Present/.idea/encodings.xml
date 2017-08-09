@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file:///Volumes/data/apache-maven-3.5.0" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/apache-maven" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/maven-artifact" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/maven-builder-support" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/maven-compat" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/maven-core" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/maven-embedder" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/maven-model" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/maven-model-builder" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/maven-plugin-api" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/maven-repository-metadata" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/maven-resolver-provider" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/maven-settings" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/maven-settings-builder" charset="UTF-8" />
+    <file url="file:///Volumes/data/apache-maven-3.5.0/maven-slf4j-provider" charset="UTF-8" />
+  </component>
+</project>

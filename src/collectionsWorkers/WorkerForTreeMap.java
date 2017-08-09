@@ -9,22 +9,25 @@ import java.util.NoSuchElementException;
 import java.util.TreeMap;
 
 /**
- * Created by volha_huretskaya on 4/5/17.
+ * Используется для измерения скорости работы TreeMap
  */
 public class WorkerForTreeMap {
 
     TimeCalculation timeCalculation = new TimeCalculation();
 
-
+    /**
+     * Метод измерения скорости работы TreeMap
+     * @param hashMap
+     */
     public void createPresentUsingTreeMap(Map<Integer, String> hashMap) {
-
+        /**
+         * TreeMap созданного подарка
+         */
         Map<Integer, String> treeMap = new TreeMap<Integer, String>(hashMap);
         try {
 
             if (hashMap.isEmpty()) {
                 throw new NullPointerException();
-
-
             }
 
             long startTime = timeCalculation.currentTimeMillis();

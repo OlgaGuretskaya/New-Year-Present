@@ -9,16 +9,22 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by volha_huretskaya on 4/5/17.
+ * Используется для измерения скорости работы LinkedList
  */
 public class WorkerForLinkedList {
 
     TimeCalculation timeCalculation = new TimeCalculation();
 
-
+    /**
+     * Метод измерения скорости работы LinkedList
+     * @param list
+     */
     public void createPresentUsingLinkedList(List<String> list) {
 
         try {
+            /**
+             * LinkedList созданного подарка
+             */
             List<String> linkedList = new LinkedList<String>(list);
             long startTime = timeCalculation.currentTimeMillis();
 

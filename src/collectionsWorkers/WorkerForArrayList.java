@@ -9,17 +9,23 @@ import timeCalculation.TimeCalculation;
 import java.util.*;
 
 /**
- * Created by Olga on 21.03.2017.
+ * Используется для проверки скорости работы ArrayList
  */
 public class WorkerForArrayList {
 
     TimeCalculation timeCalculation = new TimeCalculation();
 
-
+    /**
+     * Метод измерения скорости работы ArrayList
+     * @param list
+     */
     public void createPresentUsingArrayList(List<String> list) {
 
 
         try {
+            /**
+             * ArrayList созданного подарка
+             */
             List<String> ourPresent = new ArrayList<String>(list);
             System.out.println(" ");
             long startTime = timeCalculation.currentTimeMillis();

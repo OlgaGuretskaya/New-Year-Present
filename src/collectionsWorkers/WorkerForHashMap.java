@@ -9,16 +9,22 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by volha_huretskaya on 4/5/17.
+ * Используется для измерения скорости работы HashMap
  */
 public class WorkerForHashMap {
 
     TimeCalculation timeCalculation = new TimeCalculation();
 
-
+    /**
+     * Метод измерения скорости работы HashMap
+     * @param list
+     * @return
+     */
     public Map createPresentUsingHashMap(List<String> list) {
 
-
+        /**
+         * HashMap созданного подарка
+         */
         Map<Integer, String> hashMap = new HashMap<Integer, String>();
         try {
             Integer mapKey;
